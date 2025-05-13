@@ -1,0 +1,273 @@
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url(../../image/bg-img2.jpg);
+  background-repeat: repeat;
+  background-size: 20rem;
+  /* color: #000; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 10px 40px;
+}
+
+.logo {
+  color: orange;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+header nav ul li a:hover {
+  background-color: white;
+  color: black;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px 20px;
+  gap: 50px;
+  position: relative;
+  /* Background Styling */
+  background-image: url(../../image/Fulki_LE_upscale_balanced_x4.jpg);
+  /* replace with your desired image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /* Enables parallax effect */
+  animation: bgScroll 20s linear infinite;
+}
+
+main::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 150px;
+  background: linear-gradient(to bottom, rgba(255, 102, 0, 0) 0%, #1a2a1a 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+main .hero-text {
+  background: rgba(255, 255, 255, 0.1);
+  /* transparent white */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* Safari support */
+  padding: 30px 50px;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIUlEQVQYV2NkYGD4z0ABYBxVSFADmJiYmJjEAAAAgAEANRg3AgAAAABJRU5ErkJggg==');
+  opacity: 0.1;
+  z-index: -1;
+}
+
+
+main .imcontainer {
+  width: 25rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+main .images:hover {
+  transform: scale(1.05);
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.glow1,
+.glow2 {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.glow1:hover {
+  background-image: linear-gradient(to right, #205781, #4f959d, #98d2c0);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.glow2:hover {
+  background-image: linear-gradient(to right, #3d365c, #7c4585, #c95792);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+#about {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 40px;
+}
+
+.about-card {
+  background-color: #111;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+#about img {
+  width: 18rem;
+  height: 18rem;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05);
+}
+
+#contact {
+  background-color: rgb(0, 41, 0);
+  text-align: center;
+  padding: 60px 10%;
+}
+
+#contact h1 {
+  font-size: 40px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icon {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1);
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+  /* Facebook Blue */
+}
+
+.youtube:hover {
+  background-color: #ff0000;
+  /* YouTube Red */
+}
+
+.website:hover {
+  background-color: orangered;
+  /* Microsoft Blue (can be changed to your brand color) */
+}
+
+
+#gallery {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+#gallery h1 {
+  font-size: 50px;
+  border-bottom: 2px solid white;
+}
+
+.gallery-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 70px;
+  margin-top: 30px;
+}
+
+.gallery-grid img {
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background-color: white;
+  padding: 20px;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+  margin-top: 60px;
+}
